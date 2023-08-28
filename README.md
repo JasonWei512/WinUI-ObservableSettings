@@ -3,7 +3,7 @@
 [![Nuget](https://img.shields.io/nuget/v/NickJohn.WinUI.ObservableSettings)](https://www.nuget.org/packages/NickJohn.WinUI.ObservableSettings)
 [![CI](https://github.com/JasonWei512/WinUI-ObservableSettings/actions/workflows/CI.yml/badge.svg)](https://github.com/JasonWei512/WinUI-ObservableSettings/actions/workflows/CI.yml)
 
-A C# source generator to help you generate boilerplates to read and write settings in [Windows.Storage.ApplicationData.Current.LocalSettings](https://learn.microsoft.com/en-us/windows/apps/design/app-settings/store-and-retrieve-app-data#retrieve-the-local-app-data-store) in WinUI 3.
+A C# source generator to help you generate boilerplates to read and write settings in [Windows.Storage.ApplicationData.Current.LocalSettings](https://learn.microsoft.com/en-us/windows/apps/design/app-settings/store-and-retrieve-app-data#retrieve-the-local-app-data-store) in packaged WinUI 3 app.
 
 It will generate a partial class that:
 - Has strong-typed properties to read and write settings in storage
