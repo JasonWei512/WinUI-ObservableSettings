@@ -1,0 +1,54 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net5.0-windows10.0.17763.0;net6.0-windows10.0.17763.0</TargetFrameworks>
+    <LangVersion>11</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>NickJohn.WinUI.ObservableSettings</PackageId>
+    <Title>NickJohn.WinUI.ObservableSettings</Title>
+    <Description>A C# source generator to help you generate boilerplates to read and write settings in WinUI 3.</Description>
+    <Authors>NickJohn</Authors>
+    <Version>0.0.1</Version>
+    <PackageProjectUrl>https://github.com/JasonWei512/WinUI-ObservableSettings</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/JasonWei512/WinUI-ObservableSettings</RepositoryUrl>
+    <PackageTags>WinUI;MVVM;Setting;Settings</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NickJohn.WinUI.ObservableSettings.SourceGenerator\NickJohn.WinUI.ObservableSettings.SourceGenerator.csproj" ReferenceOutputAssembly="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\NickJohn.WinUI.ObservableSettings.SourceGenerator\bin\$(Configuration)\netstandard2.0\NickJohn.WinUI.ObservableSettings.SourceGenerator.dll" PackagePath="analyzers\dotnet\cs" Pack="true" Visible="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Helpers\SettingsManager.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SettingsManager.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Helpers\SettingsManager.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>SettingsManager.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+</Project>
