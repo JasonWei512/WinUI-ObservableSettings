@@ -18,6 +18,7 @@
     <PackageTags>WinUI;WinUI3;WinUI 3;MVVM;Setting;Settings</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <IncludeSymbols>True</IncludeSymbols>
   </PropertyGroup>
 
   <ItemGroup>
