@@ -7,7 +7,7 @@ using System.Text.Json;
 using Windows.Foundation.Collections;
 using Windows.Storage;
 
-namespace NickJohn.WinUI.ObservableSettings;
+namespace NickJohn.WinUI.ObservableSettings.Internal;
 
 /// <summary>
 /// A helper class to read and write settings in <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/>.

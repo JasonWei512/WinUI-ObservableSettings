@@ -207,14 +207,14 @@ public class ObservableSettingGenerator : IIncrementalGenerator
         source.AppendLine($$"""
                         get
                         {
-                            return global::NickJohn.WinUI.ObservableSettings.SettingsManager.{{(isNativeSettingType ? $"GetNativeSetting" : $"GetJsonSetting")}}{{(isNullableType ? "Nullable" : "")}}("{{settingKey}}", @{{fieldName}});
+                            return global::NickJohn.WinUI.ObservableSettings.Internal.SettingsManager.{{(isNativeSettingType ? $"GetNativeSetting" : $"GetJsonSetting")}}{{(isNullableType ? "Nullable" : "")}}("{{settingKey}}", @{{fieldName}});
                         }
                         set
                         {
                             {{fieldTypeNameWithGlobalPrefix}} oldValue = {{propertyName}};
                             if (!global::System.Collections.Generic.EqualityComparer<{{fieldTypeNameWithGlobalPrefix}}>.Default.Equals(oldValue, value))
                             {
-                                global::NickJohn.WinUI.ObservableSettings.SettingsManager.{{(isNativeSettingType ? "SetNativeSetting" : "SetJsonSetting")}}("{{settingKey}}", value);
+                                global::NickJohn.WinUI.ObservableSettings.Internal.SettingsManager.{{(isNativeSettingType ? "SetNativeSetting" : "SetJsonSetting")}}("{{settingKey}}", value);
                                 PropertyChanged?.Invoke(this, new global::System.ComponentModel.PropertyChangedEventArgs("{{propertyName}}"));
             """);
 

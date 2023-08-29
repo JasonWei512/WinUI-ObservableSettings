@@ -3,7 +3,7 @@
 <#@ import namespace="System.Linq" #>
 <#@ import namespace="System.Text" #>
 <#@ import namespace="System.Collections.Generic" #>
-<#@ assembly name="$(SolutionDir)NickJohn.WinUI.ObservableSettings.Core\bin\$(Configuration)\netstandard2.0\NickJohn.WinUI.ObservableSettings.Core.dll" #>
+<#@ assembly name="$(SolutionDir)src\NickJohn.WinUI.ObservableSettings.Core\bin\$(Configuration)\netstandard2.0\NickJohn.WinUI.ObservableSettings.Core.dll" #>
 <#@ import namespace="NickJohn.WinUI.ObservableSettings.Core.Constants" #>
 <#@ output extension=".cs" #>
 // Note:
@@ -15,7 +15,7 @@ using System.Text.Json;
 using Windows.Foundation.Collections;
 using Windows.Storage;
 
-namespace NickJohn.WinUI.ObservableSettings;
+namespace NickJohn.WinUI.ObservableSettings.Internal;
 
 /// <summary>
 /// A helper class to read and write settings in <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/>.
