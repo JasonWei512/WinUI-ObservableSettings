@@ -1,0 +1,56 @@
+name: ci
+
+on: 
+  push:
+  pull_request: 
+  workflow_dispatch:
+  release:
+    types: [released]
+
+jobs:
+  ci:
+    runs-on: windows-latest
+
+    env:
+      SOLUTION_NAME: NickJohn.WinUI.ObservableSettings.sln
+      PACKAGE_PROJECT_NAME: NickJohn.WinUI.ObservableSettings
+      TEST_PROJECT_NAME: NickJohn.WinUI.ObservableSettings.Test
+      CONFIGURATION: Release
+      PLATFORM: x64
+
+    steps:
+    - name: 📃 Create draft release
+      uses: ncipollo/release-action@v1
+      if: github.event_name == 'push' && github.ref_type == 'tag' && startsWith(github.ref_name, 'v')
+      with:
+        draft: true
+        generateReleaseNotes: true
+
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Install .NET SDK
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 7.0.x
+
+    - name: Add MSBuild to PATH
+      uses: microsoft/setup-msbuild@v1.1
+
+    - name: Add VSTest to PATH
+      uses: darenm/Setup-VSTest@v1.2
+
+    - name: Restore dependencies
+      run: dotnet restore $env:SOLUTION_NAME
+
+    - name: Build solution
+      run: msbuild $env:SOLUTION_NAME /p:Configuration=${{ env.CONFIGURATION }} /p:Platform=${{ env.PLATFORM }}
+
+    - name: 🧪 Unit testing
+      run: vstest.console.exe test\${{ env.TEST_PROJECT_NAME }}\bin\${{ env.PLATFORM }}\${{ env.CONFIGURATION }}\*\${{ env.TEST_PROJECT_NAME }}.build.appxrecipe
+
+    - name: 🚀 Publish to Nuget
+      if: github.event_name == 'release' && github.ref_type == 'tag' && startsWith(github.ref_name, 'v')
+      run: |
+        $packageFile = Get-ChildItem src\${{ env.PACKAGE_PROJECT_NAME }}\bin\${{ env.CONFIGURATION }}\${{ env.PACKAGE_PROJECT_NAME }}.*.nupkg
+        dotnet nuget push $packageFile --api-key ${{ secrets.NUGET_KEY }} --source https://api.nuget.org/v3/index.json

@@ -5,6 +5,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -18,18 +20,20 @@
     <PackageTags>WinUI;WinUI3;WinUI 3;MVVM;Setting;Settings</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <IncludeSymbols>True</IncludeSymbols>
   </PropertyGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\NickJohn.WinUI.ObservableSettings.SourceGenerator\NickJohn.WinUI.ObservableSettings.SourceGenerator.csproj" ReferenceOutputAssembly="false" />
-  </ItemGroup>
 
   <ItemGroup>
     <None Include="..\..\README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NickJohn.WinUI.ObservableSettings.SourceGenerator\NickJohn.WinUI.ObservableSettings.SourceGenerator.csproj" ReferenceOutputAssembly="false" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="..\NickJohn.WinUI.ObservableSettings.SourceGenerator\bin\$(Configuration)\netstandard2.0\NickJohn.WinUI.ObservableSettings.SourceGenerator.dll" PackagePath="analyzers\dotnet\cs" Pack="true" Visible="false" />
     <None Include="..\NickJohn.WinUI.ObservableSettings.Core\bin\$(Configuration)\netstandard2.0\NickJohn.WinUI.ObservableSettings.Core.dll" PackagePath="analyzers\dotnet\cs" Pack="true" Visible="false" />
   </ItemGroup>
