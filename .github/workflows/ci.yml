@@ -11,6 +11,9 @@ jobs:
   ci:
     runs-on: windows-latest
 
+    permissions:
+      contents: write
+
     env:
       SOLUTION_NAME: NickJohn.WinUI.ObservableSettings.sln
       PACKAGE_PROJECT_NAME: NickJohn.WinUI.ObservableSettings
