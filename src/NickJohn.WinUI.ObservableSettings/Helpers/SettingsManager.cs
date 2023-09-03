@@ -3,6 +3,8 @@
 // https://docs.microsoft.com/windows/apps/design/app-settings/store-and-retrieve-app-data#settings
 // Unfortunately there's no way to constraint a generic type "T" to "T1 or T2" in C#, so I have to use a T4 template to generate these methods.
 
+#pragma warning disable CS1574 // XML comment has cref attribute that could not be resolved
+
 using System.Text.Json;
 using Windows.Foundation.Collections;
 using Windows.Storage;

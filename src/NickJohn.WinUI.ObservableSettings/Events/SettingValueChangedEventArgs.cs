@@ -16,6 +16,9 @@ public class SettingValueChangedEventArgs<T> : EventArgs
     /// </summary>
     public T NewValue { get; private set; }
 
+    /// <summary>
+    /// Create a <see cref="SettingValueChangedEventArgs{T}"/> with <paramref name="oldValue"/> and <paramref name="newValue"/>.
+    /// </summary>
     public SettingValueChangedEventArgs(T oldValue, T newValue)
     {
         OldValue = oldValue;
