@@ -18,7 +18,7 @@
     <Version>0.0.3</Version>
     <PackageProjectUrl>https://github.com/JasonWei512/WinUI-ObservableSettings</PackageProjectUrl>
     <RepositoryUrl>https://github.com/JasonWei512/WinUI-ObservableSettings</RepositoryUrl>
-    <PackageTags>WinUI;WinUI3;WinUI 3;MVVM;Setting;Settings</PackageTags>
+    <PackageTags>WinUI;WinUI3;WinUI 3;MVVM;Setting;Settings;Source Generator</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
