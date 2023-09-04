@@ -22,8 +22,8 @@ public static class SettingsManager
 
     /// <summary>
     /// Try to read JSON string from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>, 
-    /// deserialized it to <typeparamref name="T"/> and return the value.
-    /// Otherwise, return <paramref name="defaultValue"/>.
+    /// deserialized it to <typeparamref name="T"/> and return the value. <br/>
+    /// If failed, return <paramref name="defaultValue"/>.
     /// </summary>
     /// <typeparam name="T">The type of the setting</typeparam>
     /// <param name="settingKey">The key of setting in <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/></param>
@@ -42,9 +42,9 @@ public static class SettingsManager
                         return settingValue;
                     }
                 }
-                catch (JsonException)   // The JSON is invalid
+                catch (JsonException)
                 {
-                    return defaultValue;
+                    // The JSON is invalid
                 }
             }
         }
@@ -54,8 +54,8 @@ public static class SettingsManager
 
     /// <summary>
     /// Try to read JSON string from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>, 
-    /// deserialized it to <typeparamref name="T"/> and return the value.
-    /// Otherwise, return <paramref name="defaultValue"/>.
+    /// deserialized it to <typeparamref name="T"/> and return the value. <br/>
+    /// If failed, return <paramref name="defaultValue"/>.
     /// </summary>
     /// <typeparam name="T">The type of the setting</typeparam>
     /// <param name="settingKey">The key of setting in <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/></param>
@@ -74,9 +74,9 @@ public static class SettingsManager
                         return settingValue;
                     }
                 }
-                catch (JsonException)   // The JSON is invalid
+                catch (JsonException)
                 {
-                    return defaultValue;
+                    // The JSON is invalid
                 }
             }
         }
@@ -102,8 +102,8 @@ public static class SettingsManager
     #region System.Int16
 
     /// <summary>
-    /// Try to read a <see cref="System.Int16"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>.
-    /// Otherwise, return <paramref name="defaultValue"/>.
+    /// Try to read a <see cref="System.Int16"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>. <br/>
+    /// If failed, return <paramref name="defaultValue"/>.
     /// </summary>
     /// <param name="settingKey">The key of setting in <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/></param>
     /// <param name="defaultValue">The default setting value to return if failed to read setting</param>
@@ -120,8 +120,8 @@ public static class SettingsManager
     }
 
     /// <summary>
-    /// Try to read a <see cref="System.Int16"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>.
-    /// Otherwise, return <paramref name="defaultValue"/>.
+    /// Try to read a <see cref="System.Int16"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>. <br/>
+    /// If failed, return <paramref name="defaultValue"/>.
     /// </summary>
     /// <param name="settingKey">The key of setting in <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/></param>
     /// <param name="defaultValue">The default setting value to return if failed to read setting</param>
@@ -152,8 +152,8 @@ public static class SettingsManager
     #region System.UInt16
 
     /// <summary>
-    /// Try to read a <see cref="System.UInt16"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>.
-    /// Otherwise, return <paramref name="defaultValue"/>.
+    /// Try to read a <see cref="System.UInt16"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>. <br/>
+    /// If failed, return <paramref name="defaultValue"/>.
     /// </summary>
     /// <param name="settingKey">The key of setting in <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/></param>
     /// <param name="defaultValue">The default setting value to return if failed to read setting</param>
@@ -170,8 +170,8 @@ public static class SettingsManager
     }
 
     /// <summary>
-    /// Try to read a <see cref="System.UInt16"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>.
-    /// Otherwise, return <paramref name="defaultValue"/>.
+    /// Try to read a <see cref="System.UInt16"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>. <br/>
+    /// If failed, return <paramref name="defaultValue"/>.
     /// </summary>
     /// <param name="settingKey">The key of setting in <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/></param>
     /// <param name="defaultValue">The default setting value to return if failed to read setting</param>
@@ -202,8 +202,8 @@ public static class SettingsManager
     #region System.Int32
 
     /// <summary>
-    /// Try to read a <see cref="System.Int32"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>.
-    /// Otherwise, return <paramref name="defaultValue"/>.
+    /// Try to read a <see cref="System.Int32"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>. <br/>
+    /// If failed, return <paramref name="defaultValue"/>.
     /// </summary>
     /// <param name="settingKey">The key of setting in <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/></param>
     /// <param name="defaultValue">The default setting value to return if failed to read setting</param>
@@ -220,8 +220,8 @@ public static class SettingsManager
     }
 
     /// <summary>
-    /// Try to read a <see cref="System.Int32"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>.
-    /// Otherwise, return <paramref name="defaultValue"/>.
+    /// Try to read a <see cref="System.Int32"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>. <br/>
+    /// If failed, return <paramref name="defaultValue"/>.
     /// </summary>
     /// <param name="settingKey">The key of setting in <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/></param>
     /// <param name="defaultValue">The default setting value to return if failed to read setting</param>
@@ -252,8 +252,8 @@ public static class SettingsManager
     #region System.UInt32
 
     /// <summary>
-    /// Try to read a <see cref="System.UInt32"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>.
-    /// Otherwise, return <paramref name="defaultValue"/>.
+    /// Try to read a <see cref="System.UInt32"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>. <br/>
+    /// If failed, return <paramref name="defaultValue"/>.
     /// </summary>
     /// <param name="settingKey">The key of setting in <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/></param>
     /// <param name="defaultValue">The default setting value to return if failed to read setting</param>
@@ -270,8 +270,8 @@ public static class SettingsManager
     }
 
     /// <summary>
-    /// Try to read a <see cref="System.UInt32"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>.
-    /// Otherwise, return <paramref name="defaultValue"/>.
+    /// Try to read a <see cref="System.UInt32"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>. <br/>
+    /// If failed, return <paramref name="defaultValue"/>.
     /// </summary>
     /// <param name="settingKey">The key of setting in <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/></param>
     /// <param name="defaultValue">The default setting value to return if failed to read setting</param>
@@ -302,8 +302,8 @@ public static class SettingsManager
     #region System.Int64
 
     /// <summary>
-    /// Try to read a <see cref="System.Int64"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>.
-    /// Otherwise, return <paramref name="defaultValue"/>.
+    /// Try to read a <see cref="System.Int64"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>. <br/>
+    /// If failed, return <paramref name="defaultValue"/>.
     /// </summary>
     /// <param name="settingKey">The key of setting in <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/></param>
     /// <param name="defaultValue">The default setting value to return if failed to read setting</param>
@@ -320,8 +320,8 @@ public static class SettingsManager
     }
 
     /// <summary>
-    /// Try to read a <see cref="System.Int64"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>.
-    /// Otherwise, return <paramref name="defaultValue"/>.
+    /// Try to read a <see cref="System.Int64"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>. <br/>
+    /// If failed, return <paramref name="defaultValue"/>.
     /// </summary>
     /// <param name="settingKey">The key of setting in <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/></param>
     /// <param name="defaultValue">The default setting value to return if failed to read setting</param>
@@ -352,8 +352,8 @@ public static class SettingsManager
     #region System.UInt64
 
     /// <summary>
-    /// Try to read a <see cref="System.UInt64"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>.
-    /// Otherwise, return <paramref name="defaultValue"/>.
+    /// Try to read a <see cref="System.UInt64"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>. <br/>
+    /// If failed, return <paramref name="defaultValue"/>.
     /// </summary>
     /// <param name="settingKey">The key of setting in <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/></param>
     /// <param name="defaultValue">The default setting value to return if failed to read setting</param>
@@ -370,8 +370,8 @@ public static class SettingsManager
     }
 
     /// <summary>
-    /// Try to read a <see cref="System.UInt64"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>.
-    /// Otherwise, return <paramref name="defaultValue"/>.
+    /// Try to read a <see cref="System.UInt64"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>. <br/>
+    /// If failed, return <paramref name="defaultValue"/>.
     /// </summary>
     /// <param name="settingKey">The key of setting in <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/></param>
     /// <param name="defaultValue">The default setting value to return if failed to read setting</param>
@@ -402,8 +402,8 @@ public static class SettingsManager
     #region System.Single
 
     /// <summary>
-    /// Try to read a <see cref="System.Single"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>.
-    /// Otherwise, return <paramref name="defaultValue"/>.
+    /// Try to read a <see cref="System.Single"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>. <br/>
+    /// If failed, return <paramref name="defaultValue"/>.
     /// </summary>
     /// <param name="settingKey">The key of setting in <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/></param>
     /// <param name="defaultValue">The default setting value to return if failed to read setting</param>
@@ -420,8 +420,8 @@ public static class SettingsManager
     }
 
     /// <summary>
-    /// Try to read a <see cref="System.Single"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>.
-    /// Otherwise, return <paramref name="defaultValue"/>.
+    /// Try to read a <see cref="System.Single"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>. <br/>
+    /// If failed, return <paramref name="defaultValue"/>.
     /// </summary>
     /// <param name="settingKey">The key of setting in <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/></param>
     /// <param name="defaultValue">The default setting value to return if failed to read setting</param>
@@ -452,8 +452,8 @@ public static class SettingsManager
     #region System.Double
 
     /// <summary>
-    /// Try to read a <see cref="System.Double"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>.
-    /// Otherwise, return <paramref name="defaultValue"/>.
+    /// Try to read a <see cref="System.Double"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>. <br/>
+    /// If failed, return <paramref name="defaultValue"/>.
     /// </summary>
     /// <param name="settingKey">The key of setting in <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/></param>
     /// <param name="defaultValue">The default setting value to return if failed to read setting</param>
@@ -470,8 +470,8 @@ public static class SettingsManager
     }
 
     /// <summary>
-    /// Try to read a <see cref="System.Double"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>.
-    /// Otherwise, return <paramref name="defaultValue"/>.
+    /// Try to read a <see cref="System.Double"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>. <br/>
+    /// If failed, return <paramref name="defaultValue"/>.
     /// </summary>
     /// <param name="settingKey">The key of setting in <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/></param>
     /// <param name="defaultValue">The default setting value to return if failed to read setting</param>
@@ -502,8 +502,8 @@ public static class SettingsManager
     #region System.Boolean
 
     /// <summary>
-    /// Try to read a <see cref="System.Boolean"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>.
-    /// Otherwise, return <paramref name="defaultValue"/>.
+    /// Try to read a <see cref="System.Boolean"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>. <br/>
+    /// If failed, return <paramref name="defaultValue"/>.
     /// </summary>
     /// <param name="settingKey">The key of setting in <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/></param>
     /// <param name="defaultValue">The default setting value to return if failed to read setting</param>
@@ -520,8 +520,8 @@ public static class SettingsManager
     }
 
     /// <summary>
-    /// Try to read a <see cref="System.Boolean"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>.
-    /// Otherwise, return <paramref name="defaultValue"/>.
+    /// Try to read a <see cref="System.Boolean"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>. <br/>
+    /// If failed, return <paramref name="defaultValue"/>.
     /// </summary>
     /// <param name="settingKey">The key of setting in <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/></param>
     /// <param name="defaultValue">The default setting value to return if failed to read setting</param>
@@ -552,8 +552,8 @@ public static class SettingsManager
     #region System.Char
 
     /// <summary>
-    /// Try to read a <see cref="System.Char"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>.
-    /// Otherwise, return <paramref name="defaultValue"/>.
+    /// Try to read a <see cref="System.Char"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>. <br/>
+    /// If failed, return <paramref name="defaultValue"/>.
     /// </summary>
     /// <param name="settingKey">The key of setting in <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/></param>
     /// <param name="defaultValue">The default setting value to return if failed to read setting</param>
@@ -570,8 +570,8 @@ public static class SettingsManager
     }
 
     /// <summary>
-    /// Try to read a <see cref="System.Char"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>.
-    /// Otherwise, return <paramref name="defaultValue"/>.
+    /// Try to read a <see cref="System.Char"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>. <br/>
+    /// If failed, return <paramref name="defaultValue"/>.
     /// </summary>
     /// <param name="settingKey">The key of setting in <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/></param>
     /// <param name="defaultValue">The default setting value to return if failed to read setting</param>
@@ -599,11 +599,61 @@ public static class SettingsManager
 
     #endregion
 
+    #region System.String
+
+    /// <summary>
+    /// Try to read a <see cref="System.String"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>. <br/>
+    /// If failed, return <paramref name="defaultValue"/>.
+    /// </summary>
+    /// <param name="settingKey">The key of setting in <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/></param>
+    /// <param name="defaultValue">The default setting value to return if failed to read setting</param>
+    public static System.String GetNativeSetting(string settingKey, System.String defaultValue)
+    {
+        if (LocalSettings.TryGetValue(settingKey, out object? settingObject))
+        {
+            if (settingObject is System.String settingValue)
+            {
+                return settingValue;
+            }
+        }
+        return defaultValue;
+    }
+
+    /// <summary>
+    /// Try to read a <see cref="System.String"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>. <br/>
+    /// If failed, return <paramref name="defaultValue"/>.
+    /// </summary>
+    /// <param name="settingKey">The key of setting in <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/></param>
+    /// <param name="defaultValue">The default setting value to return if failed to read setting</param>
+    public static System.String? GetNativeSettingNullable(string settingKey, System.String? defaultValue)
+    {
+        if (LocalSettings.TryGetValue(settingKey, out object? settingObject))
+        {
+            if (settingObject is System.String settingValue)
+            {
+                return settingValue;
+            }
+        }
+        return defaultValue;
+    }
+
+    /// <summary>
+    /// Save <paramref name="value"/> to <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>.
+    /// </summary>
+    /// <param name="settingKey">The key of setting</param>
+    /// <param name="value">The setting value to set</param>
+    public static void SetNativeSetting(string settingKey, System.String? value)
+    {
+        LocalSettings[settingKey] = value;
+    }
+
+    #endregion
+
     #region System.DateTimeOffset
 
     /// <summary>
-    /// Try to read a <see cref="System.DateTimeOffset"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>.
-    /// Otherwise, return <paramref name="defaultValue"/>.
+    /// Try to read a <see cref="System.DateTimeOffset"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>. <br/>
+    /// If failed, return <paramref name="defaultValue"/>.
     /// </summary>
     /// <param name="settingKey">The key of setting in <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/></param>
     /// <param name="defaultValue">The default setting value to return if failed to read setting</param>
@@ -620,8 +670,8 @@ public static class SettingsManager
     }
 
     /// <summary>
-    /// Try to read a <see cref="System.DateTimeOffset"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>.
-    /// Otherwise, return <paramref name="defaultValue"/>.
+    /// Try to read a <see cref="System.DateTimeOffset"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>. <br/>
+    /// If failed, return <paramref name="defaultValue"/>.
     /// </summary>
     /// <param name="settingKey">The key of setting in <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/></param>
     /// <param name="defaultValue">The default setting value to return if failed to read setting</param>
@@ -652,8 +702,8 @@ public static class SettingsManager
     #region System.TimeSpan
 
     /// <summary>
-    /// Try to read a <see cref="System.TimeSpan"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>.
-    /// Otherwise, return <paramref name="defaultValue"/>.
+    /// Try to read a <see cref="System.TimeSpan"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>. <br/>
+    /// If failed, return <paramref name="defaultValue"/>.
     /// </summary>
     /// <param name="settingKey">The key of setting in <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/></param>
     /// <param name="defaultValue">The default setting value to return if failed to read setting</param>
@@ -670,8 +720,8 @@ public static class SettingsManager
     }
 
     /// <summary>
-    /// Try to read a <see cref="System.TimeSpan"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>.
-    /// Otherwise, return <paramref name="defaultValue"/>.
+    /// Try to read a <see cref="System.TimeSpan"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>. <br/>
+    /// If failed, return <paramref name="defaultValue"/>.
     /// </summary>
     /// <param name="settingKey">The key of setting in <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/></param>
     /// <param name="defaultValue">The default setting value to return if failed to read setting</param>
@@ -702,8 +752,8 @@ public static class SettingsManager
     #region System.Guid
 
     /// <summary>
-    /// Try to read a <see cref="System.Guid"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>.
-    /// Otherwise, return <paramref name="defaultValue"/>.
+    /// Try to read a <see cref="System.Guid"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>. <br/>
+    /// If failed, return <paramref name="defaultValue"/>.
     /// </summary>
     /// <param name="settingKey">The key of setting in <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/></param>
     /// <param name="defaultValue">The default setting value to return if failed to read setting</param>
@@ -720,8 +770,8 @@ public static class SettingsManager
     }
 
     /// <summary>
-    /// Try to read a <see cref="System.Guid"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>.
-    /// Otherwise, return <paramref name="defaultValue"/>.
+    /// Try to read a <see cref="System.Guid"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>. <br/>
+    /// If failed, return <paramref name="defaultValue"/>.
     /// </summary>
     /// <param name="settingKey">The key of setting in <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/></param>
     /// <param name="defaultValue">The default setting value to return if failed to read setting</param>
@@ -752,8 +802,8 @@ public static class SettingsManager
     #region Windows.Foundation.Point
 
     /// <summary>
-    /// Try to read a <see cref="Windows.Foundation.Point"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>.
-    /// Otherwise, return <paramref name="defaultValue"/>.
+    /// Try to read a <see cref="Windows.Foundation.Point"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>. <br/>
+    /// If failed, return <paramref name="defaultValue"/>.
     /// </summary>
     /// <param name="settingKey">The key of setting in <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/></param>
     /// <param name="defaultValue">The default setting value to return if failed to read setting</param>
@@ -770,8 +820,8 @@ public static class SettingsManager
     }
 
     /// <summary>
-    /// Try to read a <see cref="Windows.Foundation.Point"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>.
-    /// Otherwise, return <paramref name="defaultValue"/>.
+    /// Try to read a <see cref="Windows.Foundation.Point"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>. <br/>
+    /// If failed, return <paramref name="defaultValue"/>.
     /// </summary>
     /// <param name="settingKey">The key of setting in <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/></param>
     /// <param name="defaultValue">The default setting value to return if failed to read setting</param>
@@ -802,8 +852,8 @@ public static class SettingsManager
     #region Windows.Foundation.Size
 
     /// <summary>
-    /// Try to read a <see cref="Windows.Foundation.Size"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>.
-    /// Otherwise, return <paramref name="defaultValue"/>.
+    /// Try to read a <see cref="Windows.Foundation.Size"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>. <br/>
+    /// If failed, return <paramref name="defaultValue"/>.
     /// </summary>
     /// <param name="settingKey">The key of setting in <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/></param>
     /// <param name="defaultValue">The default setting value to return if failed to read setting</param>
@@ -820,8 +870,8 @@ public static class SettingsManager
     }
 
     /// <summary>
-    /// Try to read a <see cref="Windows.Foundation.Size"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>.
-    /// Otherwise, return <paramref name="defaultValue"/>.
+    /// Try to read a <see cref="Windows.Foundation.Size"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>. <br/>
+    /// If failed, return <paramref name="defaultValue"/>.
     /// </summary>
     /// <param name="settingKey">The key of setting in <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/></param>
     /// <param name="defaultValue">The default setting value to return if failed to read setting</param>
@@ -852,8 +902,8 @@ public static class SettingsManager
     #region Windows.Foundation.Rect
 
     /// <summary>
-    /// Try to read a <see cref="Windows.Foundation.Rect"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>.
-    /// Otherwise, return <paramref name="defaultValue"/>.
+    /// Try to read a <see cref="Windows.Foundation.Rect"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>. <br/>
+    /// If failed, return <paramref name="defaultValue"/>.
     /// </summary>
     /// <param name="settingKey">The key of setting in <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/></param>
     /// <param name="defaultValue">The default setting value to return if failed to read setting</param>
@@ -870,8 +920,8 @@ public static class SettingsManager
     }
 
     /// <summary>
-    /// Try to read a <see cref="Windows.Foundation.Rect"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>.
-    /// Otherwise, return <paramref name="defaultValue"/>.
+    /// Try to read a <see cref="Windows.Foundation.Rect"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>. <br/>
+    /// If failed, return <paramref name="defaultValue"/>.
     /// </summary>
     /// <param name="settingKey">The key of setting in <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/></param>
     /// <param name="defaultValue">The default setting value to return if failed to read setting</param>
@@ -899,54 +949,6 @@ public static class SettingsManager
 
     #endregion
 
-    #region System.String
-
-    /// <summary>
-    /// Try to read a <see cref="System.String"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>.
-    /// Otherwise, return <paramref name="defaultValue"/>.
-    /// </summary>
-    /// <param name="settingKey">The key of setting in <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/></param>
-    /// <param name="defaultValue">The default setting value to return if failed to read setting</param>
-    public static System.String GetNativeSetting(string settingKey, System.String defaultValue)
-    {
-        if (LocalSettings.TryGetValue(settingKey, out object? settingObject))
-        {
-            if (settingObject is System.String settingValue)
-            {
-                return settingValue;
-            }
-        }
-        return defaultValue;
-    }
-
-    /// <summary>
-    /// Try to read a <see cref="System.String"/> from <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>.
-    /// Otherwise, return <paramref name="defaultValue"/>.
-    /// </summary>
-    /// <param name="settingKey">The key of setting in <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/></param>
-    /// <param name="defaultValue">The default setting value to return if failed to read setting</param>
-    public static System.String? GetNativeSettingNullable(string settingKey, System.String? defaultValue)
-    {
-        if (LocalSettings.TryGetValue(settingKey, out object? settingObject))
-        {
-            if (settingObject is System.String settingValue)
-            {
-                return settingValue;
-            }
-        }
-        return defaultValue;
-    }
-
-    /// <summary>
-    /// Save <paramref name="value"/> to <see cref="Windows.Storage.ApplicationData.Current.LocalSettings.Values"/> with <paramref name="settingKey"/>.
-    /// </summary>
-    /// <param name="settingKey">The key of setting</param>
-    /// <param name="value">The setting value to set</param>
-    public static void SetNativeSetting(string settingKey, System.String? value)
-    {
-        LocalSettings[settingKey] = value;
-    }
-
-    #endregion
-
 }
+
+#pragma warning restore CS1574 // XML comment has cref attribute that could not be resolved
