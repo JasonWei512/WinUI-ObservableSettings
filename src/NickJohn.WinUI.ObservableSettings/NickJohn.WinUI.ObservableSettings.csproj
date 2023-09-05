@@ -15,7 +15,7 @@
     <Title>NickJohn.WinUI.ObservableSettings</Title>
     <Description>A C# source generator to help you generate boilerplates to read and write settings in packaged WinUI 3 app.</Description>
     <Authors>NickJohn</Authors>
-    <Version>0.0.3</Version>
+    <Version>1.0.0</Version>
     <PackageProjectUrl>https://github.com/JasonWei512/WinUI-ObservableSettings</PackageProjectUrl>
     <RepositoryUrl>https://github.com/JasonWei512/WinUI-ObservableSettings</RepositoryUrl>
     <PackageTags>WinUI;WinUI3;WinUI 3;MVVM;Setting;Settings;Source Generator</PackageTags>
