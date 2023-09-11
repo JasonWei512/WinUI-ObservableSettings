@@ -46,7 +46,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore $env:SOLUTION_NAME
 
-    - name: Build solution
+    - name: ⚒️ Build solution
       run: msbuild $env:SOLUTION_NAME /p:Configuration=${{ env.CONFIGURATION }} /p:Platform=${{ env.PLATFORM }}
 
     - name: 🧪 Unit testing
@@ -56,4 +56,4 @@ jobs:
       if: github.event_name == 'release' && github.ref_type == 'tag' && startsWith(github.ref_name, 'v')
       run: |
         $packageFile = Get-ChildItem src\${{ env.PACKAGE_PROJECT_NAME }}\bin\${{ env.CONFIGURATION }}\${{ env.PACKAGE_PROJECT_NAME }}.*.nupkg
-        dotnet nuget push $packageFile --api-key ${{ secrets.NUGET_KEY }} --source https://api.nuget.org/v3/index.json
+        dotnet nuget push $packageFile --api-key ${{ secrets.NUGET_KEY }} --source https://api.nuget.org/v3/index.json
